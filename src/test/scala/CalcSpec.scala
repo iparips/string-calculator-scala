@@ -16,5 +16,10 @@ class CalcSpec extends Specification {
       Calc.calc("2") shouldEqual(2)
     }
 
+    "given string with multiple comma separated numbers it adds them" >> {
+      Calc.calc("1,2") shouldEqual(3)
+      Calc.calc("2,3,4,5") shouldEqual(14)
+    }
+
   }
 }

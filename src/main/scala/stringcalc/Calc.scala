@@ -6,9 +6,12 @@ object Calc {
 
     input match {
       case "" => 0
-      case i @ _ => i.toInt
+      case i @ _ => add(i)
     }
 
   }
+
+  private def add(input: String):Int =
+    input.split(",").map(_.toInt).sum
 
 }
