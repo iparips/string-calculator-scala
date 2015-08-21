@@ -21,5 +21,9 @@ class CalcSpec extends Specification {
       Calc.calc("2,3,4,5") shouldEqual(14)
     }
 
+    """given input of '1\n2,3' it returns 6""" >> {
+      Calc.calc("1\n2,3") shouldEqual(6)
+    }
+
   }
 }

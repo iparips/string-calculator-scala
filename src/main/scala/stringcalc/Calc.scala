@@ -12,6 +12,6 @@ object Calc {
   }
 
   private def add(input: String):Int =
-    input.split(",").map(_.toInt).sum
+    input.split(Array(',','\n')).map(_.toInt).sum
 
 }
