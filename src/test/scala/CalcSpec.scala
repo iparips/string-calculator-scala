@@ -11,5 +11,10 @@ class CalcSpec extends Specification {
       Calc.calc("") shouldEqual(0)
     }
 
+    "given string with one number it returns that number" >> {
+      Calc.calc("1") shouldEqual(1)
+      Calc.calc("2") shouldEqual(2)
+    }
+
   }
 }

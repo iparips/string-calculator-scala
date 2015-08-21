@@ -5,7 +5,8 @@ object Calc {
   def calc(input:String):Int = {
 
     input match {
-      case _ => 0
+      case "" => 0
+      case i @ _ => i.toInt
     }
 
   }
