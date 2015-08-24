@@ -29,5 +29,9 @@ class CalcSpec extends Specification {
       Calc.calc("//;1\n2;3") shouldEqual(6)
     }
 
+    "given input of 1,x it raises invalid input error" >> {
+      Calc.calc("1,x") must throwA[Exception](message = "invalid input '1,x'")
+    }
+
   }
 }

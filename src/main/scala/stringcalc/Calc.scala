@@ -20,7 +20,11 @@ object Calc {
         splitNumbersAndSeparators(input)
       else (input, DEFAULT_SEPARATORS)
 
-    numbers.split(separators).map(_.toInt).sum
+    try {
+      numbers.split(separators).map(_.toInt).sum
+    } catch {
+      case e: Exception => throw new Exception(s"invalid input '$input'")
+    }
 
   }
 
