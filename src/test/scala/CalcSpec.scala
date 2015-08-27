@@ -12,16 +12,16 @@ class CalcSpec extends Specification with OptionMatchers {
       Calc.calc("") must beSome(0)
     }
 
-//    "given string with one number it returns that number" >> {
-//      Calc.calc("1") shouldEqual(1)
-//      Calc.calc("2") shouldEqual(2)
-//    }
-//
+    "given string with one number it returns that number" >> {
+      Calc.calc("1") must beSome(1)
+      Calc.calc("2") must beSome(2)
+    }
+
 //    "given string with multiple comma separated numbers it adds them" >> {
 //      Calc.calc("1,2") shouldEqual(3)
 //      Calc.calc("2,3,4,5") shouldEqual(14)
 //    }
-//
+
 //    """given input of '1\n2,3' it returns 6""" >> {
 //      Calc.calc("1\n2,3") shouldEqual(6)
 //    }
