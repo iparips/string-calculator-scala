@@ -17,10 +17,10 @@ class CalcSpec extends Specification with OptionMatchers {
       Calc.calc("2") must beSome(2)
     }
 
-//    "given string with multiple comma separated numbers it adds them" >> {
-//      Calc.calc("1,2") shouldEqual(3)
-//      Calc.calc("2,3,4,5") shouldEqual(14)
-//    }
+    "given string with multiple comma separated numbers it adds them" >> {
+      Calc.calc("1,2") must beSome(3)
+      Calc.calc("2,3,4,5") must beSome(14)
+    }
 
 //    """given input of '1\n2,3' it returns 6""" >> {
 //      Calc.calc("1\n2,3") shouldEqual(6)
