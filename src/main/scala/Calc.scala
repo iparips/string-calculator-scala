@@ -8,7 +8,7 @@ object Calc {
     string match {
       case "" => Some(0)
       case SingleNumber(n) => Some(n)
-      case CommaSeparatedNumbers(numbers) => Some(numbers.sum)
+      case CommaOrNewlineSeparatedNumbers(numbers) => Some(numbers.sum)
       case _ => None
     }
   }
@@ -19,9 +19,9 @@ object Calc {
     }
   }
 
-  object CommaSeparatedNumbers {
+  object CommaOrNewlineSeparatedNumbers {
     def unapply(string: String): Option[Seq[Int]] = {
-      val parts = string.split(',').toSeq
+      val parts = string.split(Array(',','\n')).toSeq
       //Try(parts.map(_.toInt)).toOption
       Try(parts.map(_.toInt)) match {
         case Success(numbers) => Some(numbers)

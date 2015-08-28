@@ -22,12 +22,12 @@ class CalcSpec extends Specification with OptionMatchers {
       Calc.calc("2,3,4,5") must beSome(14)
     }
 
-//    """given input of '1\n2,3' it returns 6""" >> {
-//      Calc.calc("1\n2,3") shouldEqual(6)
-//    }
+    """given input of '1\n2,3' it returns 6""" >> {
+      Calc.calc("1\n2,3") must beSome(6)
+    }
 //
 //    """given input of '//;\n1;2' it returns 3""" >> {
-//      Calc.calc("//;1\n2;3") shouldEqual(6)
+//      Calc.calc("//;1\n2;3") must beSome(6)
 //    }
 //
 //    "given input of 1,x it raises invalid input error" >> {
